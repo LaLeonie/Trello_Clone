@@ -1,3 +1,5 @@
+import { AppContainer } from "./styles";
+
 export function App() {
-  return null;
+  return <AppContainer>App will go here</AppContainer>;
 }
