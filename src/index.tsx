@@ -2,10 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import { App } from "./App";
+import { AppStateContext } from "./state/AppStateContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppStateContext>
+      <App />
+    </AppStateContext>
   </React.StrictMode>,
   document.getElementById("root")
 );
