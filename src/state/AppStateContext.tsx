@@ -37,7 +37,7 @@ const appData: AppState = {
 
 type AppStateContextProps = {
   lists: List[];
-  getTaskByListId(id: string): Task[];
+  getTasksByListId(id: string): Task[];
 };
 
 const AppStateContext = createContext<AppStateContextProps>(
