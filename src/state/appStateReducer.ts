@@ -1,5 +1,6 @@
 import { Action } from "./actions";
 import { nanoid } from "nanoid";
+import { findItemIndexById } from "../utils/arrayUtils";
 
 export type Task = {
   id: string;
@@ -34,9 +35,10 @@ export const appStateReducer = (
       const targetListIndex = findItemIndexById(draft.lists, listId);
 
       draft.lists[targetListIndex].tasks.push({ id: nanoid(), text });
+      break;
     }
     default: {
-      return state;
+      return draft;
     }
   }
 };
